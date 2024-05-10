@@ -1,0 +1,100 @@
+{
+    "service_type": "generate_data",
+    "description": "Configuration to generate compounds with given HOMO and LUMO energies.\n\n    Example:\n    Assuming model service cataloged name of gt4sd_gen\n\n    <cmd> gt4sd_gen generate with MolGXQM9Generator data  sample 20 </cmd>\n    ",
+    "target": null,
+    "generator_type": {
+        "algorithm_application": "MolGXQM9Generator",
+        "domain": "materials",
+        "algorithm_name": "MolGX",
+        "algorithm_type": "conditional_generation"
+    },
+    "algorithm_versions": [
+        "v0"
+    ],
+    "service_name": "generate with MolGXQM9Generator",
+    "service_description": "",
+    "valid_types": [
+        "MolGXQM9Generator"
+    ],
+    "type_description": {},
+    "parameters": {
+        "algorithm_version": {
+            "title": "Algorithm Version",
+            "default": "v0",
+            "type": "string"
+        },
+        "homo_energy_value": {
+            "title": "Homo Energy Value",
+            "description": "Target HOMO energy value.",
+            "default": -0.25,
+            "type": "number"
+        },
+        "lumo_energy_value": {
+            "title": "Lumo Energy Value",
+            "description": "Target LUMO energy value.",
+            "default": 0.08,
+            "type": "number"
+        },
+        "use_linear_model": {
+            "title": "Use Linear Model",
+            "description": "Linear model usage.",
+            "default": true,
+            "type": "boolean"
+        },
+        "number_of_candidates": {
+            "title": "Number Of Candidates",
+            "description": "Number of candidates to consider.",
+            "default": 2,
+            "type": "integer"
+        },
+        "maximum_number_of_candidates": {
+            "title": "Maximum Number Of Candidates",
+            "description": "Maximum number of candidates to consider.",
+            "default": 5,
+            "type": "integer"
+        },
+        "maximum_number_of_solutions": {
+            "title": "Maximum Number Of Solutions",
+            "description": "Maximum number of solutions.",
+            "default": 10,
+            "type": "integer"
+        },
+        "maximum_number_of_nodes": {
+            "title": "Maximum Number Of Nodes",
+            "description": "Maximum number of nodes in the graph exploration.",
+            "default": 50000,
+            "type": "integer"
+        },
+        "beam_size": {
+            "title": "Beam Size",
+            "description": "Size of the beam during search.",
+            "default": 2000,
+            "type": "integer"
+        },
+        "without_estimate": {
+            "title": "Without Estimate",
+            "description": "Disable estimates.",
+            "default": true,
+            "type": "boolean"
+        },
+        "use_specific_rings": {
+            "title": "Use Specific Rings",
+            "description": "Flag to indicate whether specific rings are used.",
+            "default": true,
+            "type": "boolean"
+        },
+        "use_fragment_const": {
+            "title": "Use Fragment Const",
+            "description": "Using constant fragments.",
+            "default": false,
+            "type": "boolean"
+        }
+    },
+    "required_parameters": [],
+    "category": "generation",
+    "sub_category": "generates",
+    "wheel_package": "",
+    "GPU": true,
+    "persistent": true,
+    "help": ""
+}

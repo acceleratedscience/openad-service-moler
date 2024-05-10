@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "openad_model_generation_service"
+version = "0.1.0"
+license="MIT"
+description = "Openad_model_Service  properties core service"
+authors = ["Daniel Choi <choi@ibm.com>", "Phil Downey <Phil.Downey1@ibm.com>", "Brian Duenas <Brian.Duenas@ibm.com>"]
+readme = "Readme.md"
+
+[tool.poetry.dependencies]
+scipy = "^1.12.0"
+fastapi = "0.108.0"
+uvicorn = "0.28.1"
+Molgx = "0.22.0a1"
+
+keybert ="0.8.4"
+gt4sd-trainer-hf-pl = "1.0.0"
+scikit-optimize = "0.10.1"
+# if running default gt4sd_guacamol Services
+gt4sd-inference-moler = { git = "https://github.com/acceleratedscience/Open-AD-Model-Service", subdirectory = "openad-model-inference/gt4sd_moler", branch = "main" }
+selfies = ">=2.1.1"
+pytoda = {git = "https://github.com/PhillipDowney/paccmann_datasets", rev = "1.1.3"}
+cuda-python = "11.8.3"
+
+reinvent-chemistry = "0.0.51"
+python = ">=3.9,<3.11"
+pytest = "8.0.2"
+tape-proteins = ">=0.5"
+
+
+
+[tool.poetry.extras]
+
+[tool.poetry.group.dev.dependencies]
+pyright = "^1.1.352"
+python-lsp-server = {extras = ["all"], version = "^1.10.0"}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+fix = true
+line-length = 88
+# src = ["src"]
+target-version = "py310"
+show-fixes = true
+
+[tool.ruff.lint]
+ignore = [
+    "E722", # Do not use bare `except`
+    "F401", # imported but unused
+]

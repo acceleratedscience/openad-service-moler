@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug: Service.py",
+            "type": "debugpy",
+            "request": "launch",
+            // "program": "${file}",
+            "program": "${workspaceFolder}/openad_model_generation_service/service.py",
+            // "console": "integratedTerminal",
+            "justMyCode": false, // allows debugging imported library
+            "purpose": ["debug-in-terminal"],
+            // "stopOnEntry": true
+        },
+        {
+            "name": "Attach to process",
+            "type": "debugpy",
+            "request": "attach",
+            "justMyCode": false, // allows debugging imported library
+            "processId":"${command:pickProcess}"
+        }
+    ]
+}

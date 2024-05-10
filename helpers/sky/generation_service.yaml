@@ -1,0 +1,39 @@
+service:
+  readiness_probe: /health
+  replicas: 2
+
+# Fields below describe each replica.
+resources:
+  # Optional; if left out, automatically pick the cheapest cloud.
+  ports: 8080
+  cloud: aws
+  cpus: 12+
+  memory: 10+
+  disk_size: 100
+  accelerators: V100:1
+
+workdir: .
+
+# 1x NVIDIA V100 GPU
+
+
+# Working directory (optional) containing the project codebase.
+# Its contents are synced to ~/sky_workdir/ on the cluster.
+
+setup: |
+ echo "====================================="
+ echo "Installing dependencies." $(date)
+ echo "====================================="
+
+ conda install cudatoolkit -y
+ pip install poetry==1.8.2
+ poetry install
+
+ echo "====================================="
+ echo "Build Done." $(date)
+ echo "====================================="
+
+# Typical use: make use of resources, such as running training.
+# Invoked under the workdir (i.e., can use its files).
+run: |
+  poetry run python ./openad_model_generation_service/generation_service.py

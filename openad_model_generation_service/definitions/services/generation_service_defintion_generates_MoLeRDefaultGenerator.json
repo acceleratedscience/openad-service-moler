@@ -1,0 +1,76 @@
+{
+    "service_type": "generate_data",
+    "description": "Configuration to generate compounds using default parameters of MoLeR.",
+    "target": null,
+    "generator_type": {
+        "algorithm_application": "MoLeRDefaultGenerator",
+        "domain": "materials",
+        "algorithm_name": "MoLeR",
+        "algorithm_type": "generation"
+    },
+    "algorithm_versions": [
+        "v0"
+    ],
+    "service_name": "generate with MoLeRDefaultGenerator",
+    "service_description": "",
+    "valid_types": [
+        "MoLeRDefaultGenerator"
+    ],
+    "type_description": {},
+    "parameters": {
+        "algorithm_version": {
+            "title": "Algorithm Version",
+            "default": "v0",
+            "type": "string"
+        },
+        "scaffolds": {
+            "title": "Scaffolds",
+            "description": "Scaffolds as '.'-separated SMILES. If empty, no scaffolds are used.",
+            "default": "",
+            "type": "string"
+        },
+        "num_samples": {
+            "title": "Num Samples",
+            "description": "Number of molecules to sample per call.",
+            "default": 32,
+            "type": "integer"
+        },
+        "beam_size": {
+            "title": "Beam Size",
+            "description": "Beam size to use during decoding.",
+            "default": 1,
+            "type": "integer"
+        },
+        "seed": {
+            "title": "Seed",
+            "description": "Seed used for random number generation.",
+            "default": 0,
+            "type": "integer"
+        },
+        "num_workers": {
+            "title": "Num Workers",
+            "description": "Number of workers used for generation.",
+            "default": 6,
+            "type": "integer"
+        },
+        "seed_smiles": {
+            "title": "Seed Smiles",
+            "description": "Dot-separated SMILES used to initialize the encoder. If empty, random codes are used.",
+            "default": "",
+            "type": "string"
+        },
+        "sigma": {
+            "title": "Sigma",
+            "description": "Variance of Gaussian noise being added to latent code.",
+            "default": 0.0,
+            "type": "number"
+        }
+    },
+    "required_parameters": [],
+    "category": "generation",
+    "sub_category": "generates",
+    "wheel_package": "",
+    "GPU": true,
+    "persistent": true,
+    "help": ""
+}
