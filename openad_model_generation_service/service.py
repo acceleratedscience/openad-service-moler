@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException, Request, status
-from fastapi.responses import HTMLResponse, RedirectResponse, FileResponse
+from fastapi.responses import HTMLResponse, RedirectResponse, FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
-from call_generation_services import service_requester
+from call_generation_services import service_requester, get_services
 from pydantic import BaseModel
 import torch
 import gc
@@ -39,6 +39,14 @@ def service(property_request: dict):
         memory_stats()
 
     return result
+
+
+@app.get("/service")
+async def get_service_defs():
+    """return list of services definitions"""
+    # get service list
+    service_list: list = get_services()
+    return JSONResponse(service_list)
 
 
 def main():
