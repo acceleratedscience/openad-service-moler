@@ -1,16 +1,17 @@
-# Moler Inference Service
+# Moler Inference for SMILES
 
 <!-- description -->
 <!-- /description -->
 
-Generation Service for Sky Server
+For instructions on how to deploy and use this service in OpenAD, please refer to the [OpenAD docs](https://openad.accelerate.science/docs/model-service/prepackaged-models).
 
-1. Install Sky  with `pip install "skypilot-nightly[aws]"`
+<br>
 
-2. setup your aws command line
+## Deployment Options
 
-3. run `sky check`
+- ✅ [Deploy locally using a Python virtual environment](https://openad.accelerate.science/docs/model-service/prepackaged-models)
+- ✅ [Deploy locally via container](https://openad.accelerate.science/docs/model-service/prepackaged-models#containerizing-a-model)
+- ❌ [Deploy locally via container with compose.yml](https://openad.accelerate.science/docs/model-service/prepackaged-models#deployment-via-container-composeyml)
+- ✅ [Deploy on OpenShift](https://openad.accelerate.science/docs/model-service/prepackaged-models)
+- ✅ [Deploy on SkyPilot](https://openad.accelerate.science/docs/model-service/prepackaged-models/#deploying-to-skypilot-on-aws)
 
-4. run `sky serve up generation_service.yaml`
-This will take about 10 minutes to deploy  it can be monitored through the controllers logs.
-e.g. `sky serve logs sky-service-0af4  --controller`
