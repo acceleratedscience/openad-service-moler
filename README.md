@@ -1,4 +1,4 @@
-# Moler Inference for SMILES
+# MOLER Inference for SMILES
 
 <!-- description -->
 <!-- /description -->
