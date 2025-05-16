@@ -1,4 +1,4 @@
-# MOLER Inference for SMILES
+# MOLER Conditional Molecule Generation on Scaffolds (SMILES)
 
 <!--
 The description & support tags are consumed by the generate_docs() script
