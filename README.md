@@ -10,6 +10,7 @@ https://openad.accelerate.science/docs/model-service/available-services
 <!-- support:gcloud:false -->
 
 <!-- description -->
+This OpenAD service provides access to [MoLeR, a model for conditional molecule (SMILES) generation](https://github.com/microsoft/molecule-generation) based on molecular scaffold input. MoLeR uses TensorFlow platform.,
 <!-- /description -->
 
 For instructions on how to deploy and use this service in OpenAD, please refer to the [OpenAD docs](https://openad.accelerate.science/docs/model-service/deploying-models).
