@@ -1,4 +1,4 @@
-# MoLeR Conditional Molecule Generation on Scaffolds (both SMILES)
+# MoLeR / Conditional Molecule Generation on Scaffolds
 
 <!--
 The description & support tags are consumed by the generate_docs() script
@@ -10,7 +10,7 @@ https://openad.accelerate.science/docs/model-service/available-services
 <!-- support:gcloud:false -->
 
 <!-- description -->
-This OpenAD service provides access to [MoLeR, a model for conditional molecule (SMILES) generation](https://github.com/microsoft/molecule-generation) based on molecular scaffold input (also SMILES). (MoLeR uses TensorFlow as its deep learning platform.)
+This OpenAD service provides access to [MoLeR, a model for conditional, small-molecule (SMILES) generation](https://github.com/microsoft/molecule-generation) based on molecular scaffold input (also SMILES). (MoLeR uses TensorFlow as its deep learning platform.)
 <!-- /description -->
 
 For instructions on how to deploy and use this service in OpenAD, please refer to the [OpenAD docs](https://openad.accelerate.science/docs/model-service/deploying-models).
