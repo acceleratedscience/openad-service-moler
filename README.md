@@ -13,7 +13,7 @@ https://openad.accelerate.science/docs/model-service/available-services
 This OpenAD service provides access to MoLeR, a model for conditional, small-molecule (SMILES) generation based on molecular scaffold input (also SMILES). MoLeR uses TensorFlow as its deep learning platform.
 
 More information:  
-[github.com/microsoft/molecule-generation](https://github.com/microsoft/molecule-generation)
+[github.com/microsoft/molecule-generation](https://github.com/microsoft/molecule-generation)  
 [arxiv.org/abs/2103.03864](https://arxiv.org/abs/2103.03864)
 <!-- /description -->
 
