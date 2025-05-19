@@ -1,4 +1,4 @@
-# MoLeR &nbsp;/&nbsp; Conditional Molecule Generation on SMILES Scaffolds
+# MoLeR &nbsp;/&nbsp; SMILES Generation on SMILES Scaffolds
 
 <!--
 The description & support tags are consumed by the generate_docs() script
