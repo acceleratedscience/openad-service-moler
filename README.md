@@ -1,4 +1,4 @@
-# MoLeR / Conditional Molecule Generation on Scaffolds
+# MoLeR &nbsp;/&nbsp; Conditional Molecule Generation on Scaffolds
 
 <!--
 The description & support tags are consumed by the generate_docs() script
